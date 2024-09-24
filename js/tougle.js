@@ -19,7 +19,3 @@ donationBtn.addEventListener("click", function () {
 document.getElementById("blog-btn").addEventListener("click", function () {
   window.location.href = "./index2.html";
 });
-
-document.getElementById("home-btn").addEventListener("click", function () {
-  window.location.href = "/index.html";
-});
