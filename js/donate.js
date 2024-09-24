@@ -7,7 +7,7 @@ document
     if (
       donateNoakhaliValue > myBalanceNumber ||
       isNaN(donateNoakhaliValue) ||
-      donateNoakhaliValue < 0
+      donateNoakhaliValue <= 0
     ) {
       return alert("Invaild Donate Amount");
     }
@@ -45,7 +45,7 @@ document
     if (
       donateFeniValue > myBalanceNumber ||
       isNaN(donateFeniValue) ||
-      donateFeniValue < 0
+      donateFeniValue <= 0
     ) {
       return alert("Invaild Donate Amount");
     }
@@ -79,7 +79,7 @@ document
     if (
       donateQuataMovementValue > myBalanceNumber ||
       isNaN(donateQuataMovementValue) ||
-      donateQuataMovementValue < 0
+      donateQuataMovementValue <= 0
     ) {
       return alert("Invaild Donate Amount");
     }
