@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,15 +39,15 @@
     </script>
   </head>
   <body class="font-lexend">
-    <header class="sticky top-0 bg-white pb-2">
+    <header class="sticky top-0 pb-2 backdrop-filter backdrop-blur-lg"">
       <nav
-        class="w-full mx-auto flex justify-around items-center bg-background py-4"
+        class="w-full mx-auto flex justify-around items-center bg-background bg-opacity-40 py-4"
       >
         <div>
-          <button
-            class="bg-button text-primary text-xl px-6 py-3 rounded-lg font-semibold"
+          <button id="blog-btn"
+            class="bg-button text-primary text-lg px-6 py-3 rounded-lg"
           >
-            Blog
+            blog
           </button>
         </div>
         <div class="flex items-center gap-2">
@@ -58,17 +58,21 @@
         </div>
         <div class="flex items-center gap-2">
           <img src="./assets/coin.png" alt="" />
-          <p class="text-xl font-semibold"><span>5500</span> BDT</p>
+          <p class="text-xl font-semibold">
+            <span id="my-balance">5500</span> BDT
+          </p>
         </div>
       </nav>
       <div class="flex items-center justify-center gap-4 my-7">
         <button
-          class="text-xl font-semibold text-primary px-6 py-2 bg-button rounded-lg hover:bg-background transition-colors duration-200 ease-in-out"
+          id="donation-btn"
+          class="text-xl font-semibold text-primary px-6 py-2 border bg-button rounded-lg"
         >
           Donation
         </button>
         <button
-          class="text-xl font-semibold text-primary px-6 py-2 bg-button rounded-lg hover:bg-background transition-colors duration-200 ease-in-out"
+          id="history-btn"
+          class="text-lg font-semibold text-primary px-6 py-2 border rounded-lg"
         >
           History
         </button>
@@ -76,7 +80,7 @@
     </header>
     <main>
       <!-- card section -->
-      <section class="w-11/12 mx-auto space-y-5">
+      <section id="card-section" class="w-11/12 mx-auto space-y-5 pb-20">
         <!-- card-1 -->
         <div
           class="grid grid-cols-1 lg:grid-cols-5 gap-5 p-4 border rounded-lg"
@@ -87,7 +91,9 @@
           <div class="lg:col-span-3 space-y-4">
             <button class="flex gap-1 bg-background p-3 rounded-lg">
               <img src="./assets/coin.png" alt="" />
-              <p class="font-semibold"><span>1130</span> BDT</p>
+              <p class="font-semibold">
+                <span id="total-amount-for-noakhali">1130</span> BDT
+              </p>
             </button>
             <h3 class="text-primary text-2xl">
               Donate for Flood at Noakhali, Bangladesh
@@ -101,11 +107,15 @@
               lives of those in need.
             </p>
             <input
+              id="n-donate-amount"
               class="input w-full px-4"
               placeholder="Write Donation Amount"
               type="text"
             />
-            <button class="w-full bg-button py-3 text-lg rounded-lg"  onclick="my_modal_4.showModal()">
+            <button
+              id="btn-donate-noakhali"
+              class="w-full bg-button py-3 text-lg rounded-lg"
+            >
               Donate Now
             </button>
           </div>
@@ -120,7 +130,9 @@
           <div class="lg:col-span-3 space-y-4">
             <button class="flex gap-1 bg-background p-3 rounded-lg">
               <img src="./assets/coin.png" alt="" />
-              <p class="font-semibold"><span>11300</span> BDT</p>
+              <p class="font-semibold">
+                <span id="total-amount-for-feni">11300</span> BDT
+              </p>
             </button>
             <h3 class="text-primary text-2xl">
               Donate for Flood Relief in Feni,Bangladesh
@@ -136,11 +148,15 @@
               urgent need.
             </p>
             <input
+              id="feni-donate-amount"
               class="input w-full px-4"
               placeholder="Write Donation Amount"
               type="text"
             />
-            <button class="w-full bg-button py-3 text-lg rounded-lg"  onclick="my_modal_4.showModal()">
+            <button
+              id="btn-donate-feni"
+              class="w-full bg-button py-3 text-lg rounded-lg"
+            >
               Donate Now
             </button>
           </div>
@@ -155,7 +171,9 @@
           <div class="lg:col-span-3 space-y-4">
             <button class="flex gap-1 bg-background p-3 rounded-lg">
               <img src="./assets/coin.png" alt="" />
-              <p class="font-semibold"><span>7730</span> BDT</p>
+              <p class="font-semibold">
+                <span id="total-amount-for-quata-movement">7730</span> BDT
+              </p>
             </button>
             <h3 class="text-primary text-2xl">
               Aid for Injured in the Quota Movement
@@ -172,13 +190,14 @@
               their time of need.
             </p>
             <input
+              id="quata-movement-donate-amount"
               class="input w-full px-4"
               placeholder="Write Donation Amount"
               type="text"
             />
             <button
+              id="btn-donate-quata-movement"
               class="w-full bg-button py-3 text-lg rounded-lg"
-              onclick="my_modal_4.showModal()"
             >
               Donate Now
             </button>
@@ -200,8 +219,13 @@
             </div>
           </div>
         </dialog>
-      
+      </section>
+      <!-- history section -->
+      <section id="history-container" class="hidden space-y-6"></section>
     </main>
+    <footer class="bg-background h-28 w-full"></footer>
     <script src="./js/utility.js"></script>
+    <script src="./js/donate.js"></script>
+    <script src="./js/tougle.js"></script>
   </body>
 </html>

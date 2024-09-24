@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Important FAQ</title>
+    <!-- Daisy UI and Tailwid CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- customize Css -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#111111",
+              secondary: "#111111B3",
+              button: "#B4F461",
+              background: "#F9F7F3",
+            },
+            fontFamily: {
+              lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header class="sticky top-0 z-10 bg-white pb-2">
+      <nav
+        class="w-full mx-auto flex justify-around items-center bg-background py-4"
+      >
+        <div>
+          <button
+            id="home-btn"
+            class="bg-button text-primary text-lg px-6 py-3 rounded-lg font-semibold"
+          >
+            Home
+          </button>
+        </div>
+        <div class="flex items-center gap-2">
+          <img class="w-[30px]" src="./assets/logo.png" alt="" />
+          <h2 class="text-primary font-bold text-lg max-sm:hidden">
+            Donate Bangladesh
+          </h2>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="./assets/coin.png" alt="" />
+          <p class="text-xl font-semibold">
+            <span id="my-balance">5500</span> BDT
+          </p>
+        </div>
+      </nav>
+    </header>
+    <main class="w-11/12 mx-auto">
+      <h2 class="text-4xl font-bold flex items-center my-10">Important FAQ.. <img class="w-20" src="./assets/icons8-question.gif" alt=""></h2>
+      <div class="collapse collapse-arrow bg-base-200 p-6">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What is the Document Object Model(DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>The Document Object Model (DOM) is a programming interface for web documents.  It defines the logical structure of documents and the way a document is accessed and manipulated. In the DOM specification, the term "document" is used in the broad sense - increasingly, XML is being used as a way of representing many different kinds of information that may be stored in diverse systems, and much of this would traditionally be seen as data rather than as documents.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 p-6">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>Selecting DOM (Document Object Model) elements is a fundamental aspect of web development with JavaScript. It allows developers to interact with and manipulate elements on a webpage dynamically.
+            <br>
+            Below are the approaches to select DOM elements in JavaScript:
+            <ul class="list-disc">
+              <li>Using getElementById</li>
+              <li>Using getElementsByClassName</li>
+              <li>Using getElementsByTagName</li>
+              <li>Using querySelector</li>
+              <li>Using querySelectorAll</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 p-6">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          what is the event delegation in the context of the DOM, and why is it
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>Event delegation is a design pattern in JavaScript used to efficiently manage and handle events on multiple child elements by attaching a single event listener to a common ancestor element.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you manipulate an element's attributes and styles using the
+          DOM?
+        </div>
+        <div class="collapse-content">
+          <p>There are multiple methods available in DOM to select the HTML elements and manipulate them as listed below: 
+            <ul>
+              <li>querySelector() method: The querySelector( ) method is used to select the first element that matches the specified selector provided as an argument.</li>
+              <li>getElementById( ) method: The getElementId() method is used to select a single element using its Id</li>
+              <li>getElementByClassName( ): The getElementsByClassName() method in JavaScript is used to select elements in the HTML document that have a specific class name.
+              </li>
+              <li>getElementByTagName() method: The getElementsByTagName() method is used to select elements using the specified tag name.
+              </li>
+              <li>getElementByName() method: The getElementsByName() method is used to select elements that have a specific name attribute. This method returns a NodeList of elements with the specified name.
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="./js/utility.js"></script>
+    <script src="./js/donate.js"></script>
+    <script src="./js/tougle.js"></script>
+    <script src="./js/faq.js"></script>
+  </body>
+</html>
